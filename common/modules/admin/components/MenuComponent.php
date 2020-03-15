@@ -35,7 +35,7 @@ class MenuComponent extends Component
      * @param $controller_id
      * @return array|null
      */
-    public function menuModules($module_active='admin',$controller_id)
+    public function menuModules($module_active='admin',$controller_id, $action_id)
     {
         $menu = null;
 
@@ -51,7 +51,7 @@ class MenuComponent extends Component
             } else {
                 // Por defecto
                 $module = Yii::$app->getModule('dashboard');
-                $menu[] = $module->menu($controller_id);
+                $menu[] = $module->menu($controller_id, $action_id);
             }
         }
 

@@ -1,5 +1,5 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 
@@ -7,7 +7,7 @@ use Yii;
  * Box with table
  *
  *  Example:
-    <?= \themes\adminlte\widgets\AdminlteBoxTable::widget([
+    <?= \themes\custom\widgets\AdminlteBoxTable::widget([
         'searchModel' => $searchModel,
         'dataProvider' => $dataProvider,
         'columns' => $columns,
@@ -19,7 +19,6 @@ use Yii;
         ]
     ]) ?>
  *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteBoxTable extends \yii\bootstrap\Widget
 {

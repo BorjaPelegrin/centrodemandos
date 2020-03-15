@@ -1,5 +1,5 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 
@@ -7,7 +7,6 @@ use Yii;
  * CallOut
  *
  *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteCallOut extends \yii\bootstrap\Widget
 {

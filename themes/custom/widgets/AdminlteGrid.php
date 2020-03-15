@@ -1,12 +1,11 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 
 /**
  * Grid
  *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteGrid extends \yii\bootstrap\Widget
 {

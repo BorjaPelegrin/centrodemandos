@@ -3,20 +3,21 @@
 namespace common\modules\maintenance\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "tipo".
  *
- * @property int $id_tipo
+ * @property integer $id_tipo
  * @property string $name
  * @property string $is_archived
  *
  * @property Ejercicio[] $ejercicios
  */
-class Tipo extends \yii\db\ActiveRecord
+ class Tipo extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public static function tableName()
     {
@@ -24,19 +25,19 @@ class Tipo extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['name', 'is_archived'], 'required'],
+            [['name'], 'required'],
             [['is_archived'], 'string'],
             [['name'], 'string', 'max' => 50],
         ];
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function attributeLabels()
     {
@@ -48,12 +49,42 @@ class Tipo extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[Ejercicios]].
-     *
+     * @param bool $insert
+     * @return bool
+     */
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * @param bool $insert
+     * @param array $changedAttributes
+     */
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+        if ($insert) {
+
+        }
+    }
+
+    /**
      * @return \yii\db\ActiveQuery
      */
     public function getEjercicios()
     {
         return $this->hasMany(Ejercicio::className(), ['id_tipo' => 'id_tipo']);
+    }
+
+    public static function getDropDownList()
+    {
+        return ArrayHelper::map(self::find()->asArray()->all(), 'id_tipo', 'name');
     }
 }

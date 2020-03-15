@@ -1,12 +1,11 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 
 /**
  * List
  *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteList extends \yii\bootstrap\Widget
 {

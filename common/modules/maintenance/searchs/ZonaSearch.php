@@ -2,17 +2,18 @@
 
 namespace common\modules\maintenance\searchs;
 
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\modules\maintenance\models\Zona;
 
 /**
- * ZonaSearch represents the model behind the search form of `common\modules\maintenance\models\Zona`.
+ * ZonaSearch represents the model behind the search form about `common\modules\maintenance\models\Zona`.
  */
 class ZonaSearch extends Zona
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
@@ -23,7 +24,7 @@ class ZonaSearch extends Zona
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function scenarios()
     {

@@ -1,12 +1,11 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 
 /**
  * Time line
  *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteTimeLine extends \yii\bootstrap\Widget
 {

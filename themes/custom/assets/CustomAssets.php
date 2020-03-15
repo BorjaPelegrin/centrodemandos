@@ -11,10 +11,11 @@ class CustomAssets extends \yii\web\AssetBundle
 {
     public $sourcePath = '@themes/custom';
     public $css = [
+        'css/skin-angel.css',
         'css/custom.css'
     ];
     public $js = [
-        'js/custom.js'
+        'js/jquery.slimscroll.min.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

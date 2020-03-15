@@ -19,6 +19,7 @@ echo "<?php\n";
 namespace <?= $generator->ns ?>;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "<?= $generator->generateTableName($tableName) ?>".
@@ -130,4 +131,9 @@ class <?= $className ?> extends <?= '\\' . ltrim($extend, '\\') . "\n" ?>
         return new <?= $queryClassFullName ?>(get_called_class());
     }
 <?php endif; ?>
+
+    public static function getDropDownList()
+    {
+        return ArrayHelper::map(self::find()->asArray()->all(), '<?= array_key_first($labels) ?>', 'name');
+    }
 }

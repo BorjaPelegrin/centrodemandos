@@ -27,7 +27,7 @@ class Module extends \yii\base\Module
         // custom initialization code goes here
     }
 
-    public function menu($controller_id = null)
+    public function menu($controller_id = null, $action_id = null)
     {
         $items = [
             /*[
@@ -87,7 +87,7 @@ class Module extends \yii\base\Module
             ],*/
             // MAINTENANCE
             [
-                'label'=>'<i class="fa fa-bars"></i> <span>Mantenimiento</span>',
+                'label'=>'<i class="glyphicon glyphicon-wrench"></i> <span>Mantenimiento</span>',
                 'url'=>'#',
                 'template' => '<a href="{url}" >{label}<span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>',
                 'options'=>['class'=>'treeview'],
@@ -95,19 +95,19 @@ class Module extends \yii\base\Module
                     [
                         'label'=>'<i class="fa fa-bars"></i> Tipos',
                         'url'=>['/maintenance/tipo/index'],
-                        'active'=>$controller_id == 'ejercicio' ? true:false,
+                        'active'=>$controller_id == 'tipo' ? true:false,
                         'visible'=>true,
                     ],
                     [
                         'label'=>'<i class="fa fa-bars"></i> Zonas',
                         'url'=>['/maintenance/zona/index'],
-                        'active'=>$controller_id == 'clinic-failed' ? true:false,
+                        'active'=>$controller_id == 'zona' ? true:false,
                         'visible'=>true,
                     ],
                     [
                         'label'=>'<i class="fa fa-bars"></i> Ejercicios',
                         'url'=>['/maintenance/ejercicio/index'],
-                        'active'=>$controller_id == 'inter-clinic' ? true:false,
+                        'active'=>$controller_id == 'ejercicio' ? true:false,
                         'visible'=>true,
                     ],
                 ],

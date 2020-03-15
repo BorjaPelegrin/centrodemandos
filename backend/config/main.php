@@ -13,6 +13,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
+    'language' => 'es',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -57,10 +58,10 @@ $config = [
         'urlManager' => require(__DIR__ . '/rules.php'),
         'view' => [
             'theme' => [
-                'basePath' => '@app/../themes/adminlte2',
+                'basePath' => '@app/../themes/custom',
                 'baseUrl' => '@web',
                 'pathMap' => [
-                    '@app/views' => '@app/../themes/adminlte2',
+                    '@app/views' => '@app/../themes/custom',
                 ],
             ],
         ],
@@ -77,21 +78,5 @@ $config = [
     'params' => $params,
 ];
 
-if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
-
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
-}
 
 return $config;

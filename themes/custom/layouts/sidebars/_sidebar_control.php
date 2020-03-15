@@ -13,8 +13,15 @@
         <!-- Stats tab content -->
         <div class="tab-pane" id="control-sidebar-stats-tab">
             <!-- /.control-sidebar-menu -->
+            <
+                <h3 class="control-sidebar-heading">Tareas</h3>
+                <ul class="control-sidebar-menu" style="padding: 0 15px;">
 
-            asdasd
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Chat</h3>
+
         </div>
         <!-- /.tab-pane -->
     </div>

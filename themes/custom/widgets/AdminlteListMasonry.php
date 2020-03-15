@@ -1,5 +1,5 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 use yii\base\Widget;
@@ -7,7 +7,6 @@ use yii\base\Widget;
 /**
  * List
  *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteListMasonry extends Widget
 {

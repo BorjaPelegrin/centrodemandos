@@ -3,15 +3,16 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use common\classes\Html;
-use rmenor\adminlte2\assets\AssetBundle;
-use rmenor\adminlte2\assets\PluginsBundle;
-use themes\adminlte\assets\CustomAssets;
-use backend\assets\AppAsset;
 
-AssetBundle::register($this);
-PluginsBundle::register($this);
+use yii\helpers\Html;
+use yii\widgets\Breadcrumbs;
+use backend\assets\AppAsset;
+use themes\custom\assets\CustomAssets;
+use themes\custom\assets\AdminLteAssets;
+
+
 CustomAssets::register($this);
+AdminLteAssets::register($this);
 AppAsset::register($this);
 
 $this->registerMetaTag(['name' => 'robots', 'content' => 'noindex']);

@@ -1,5 +1,5 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 
@@ -7,7 +7,6 @@ use Yii;
  * Nav Tab Box
  *
  *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteNavTabBox extends \yii\bootstrap\Widget
 {

@@ -2,39 +2,35 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\bootstrap\Tabs;
 
 /* @var $this yii\web\View */
 /* @var $model common\modules\maintenance\models\Ejercicio */
 
-$this->title = $model->name;
+$this->title = 'Viendo registro';
 $this->params['breadcrumbs'][] = ['label' => 'Ejercicios', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-\yii\web\YiiAsset::register($this);
+
+$options['class'] = 'box-warning';
+$options['box-footer'] = 'Viendo registro';
+
+$buttons = [
+    Html::a('<i class="fa fa-pencil"></i> Actualizar', ['create'], ['class' => 'btn btn-primary']),
+    Html::a('<i class="fa fa-trash"></i> Eliminar', ['delete'], ['class' => 'btn btn-danger']),
+];
 ?>
 <div class="ejercicio-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id_ejercicio], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id_ejercicio], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
-
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id_ejercicio',
-            'name',
-            'video',
-            'file',
-            'id_zona',
-            'id_tipo',
+   <?= @themes\custom\widgets\AdminlteBox::widget([
+        'buttons' => $buttons,
+        'content' => $this->render('views/_detail', [
+            'model' => $model,
+        ]),
+        'options' => [
+            'class' => isset($options['class']) ? $options['class'] : 'box-warning',
+            'class-header' => 'with-border',
+            'box-title' => isset($options['box-title']) ? $options['box-title'] : $this->title,
+            'box-footer' => isset($options['box-footer']) ? $options['box-footer'] : '',
         ],
     ]) ?>
 

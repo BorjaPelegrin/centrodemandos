@@ -5,11 +5,14 @@
 
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
-use rmenor\adminlte2\assets\AssetBundle;
-use rmenor\adminlte2\assets\PluginsBundle;
-use themes\adminlte\assets\CustomAssets;
 use backend\assets\AppAsset;
+use themes\custom\assets\CustomAssets;
+use themes\custom\assets\AdminLteAssets;
+use themes\custom\assets\FontAwesomeAssets;
 
+FontAwesomeAssets::register($this);
+CustomAssets::register($this);
+AdminLteAssets::register($this);
 AppAsset::register($this);
 
 $this->registerMetaTag(['name' => 'robots', 'content' => 'noindex']);
@@ -44,7 +47,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
         }, 6000);
     </script>
 </head>
-<body class="hold-transition skin-pink sidebar-mini">
+<body class="hold-transition skin-angel sidebar-mini">
 <div class="wrapper">
 
     <?php if (!Yii::$app->user->isGuest) : ?>

@@ -1,12 +1,11 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 
 /**
  * Table
  *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteTable extends \yii\bootstrap\Widget
 {

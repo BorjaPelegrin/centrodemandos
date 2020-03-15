@@ -1,5 +1,5 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 
@@ -7,7 +7,7 @@ use Yii;
  * Box with grid
  *
  *  Example:
-    <?= \themes\adminlte\widgets\AdminlteBoxGrid::widget([
+    <?= \themes\custom\widgets\AdminlteBoxGrid::widget([
         'searchModel' => $searchModel,
         'dataProvider' => $dataProvider,
         'columns' => $columns,
@@ -20,7 +20,6 @@ use Yii;
         ]
     ]) ?>
  *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteBoxGrid extends \yii\bootstrap\Widget
 {

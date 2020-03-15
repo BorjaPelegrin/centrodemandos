@@ -1,13 +1,11 @@
 <?php
-namespace themes\adminlte\widgets;
+namespace themes\custom\widgets;
 
 use Yii;
 
 /**
  * Box
  *
- *
- * @author Ramón Menor <ramonmenor@gmail.com>
  */
 class AdminlteBox1 extends \yii\bootstrap\Widget
 {
