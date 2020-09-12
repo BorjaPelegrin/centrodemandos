@@ -3,11 +3,12 @@
 namespace common\modules\maintenance\controllers;
 
 use Yii;
-use common\modules\maintenance\models\Ejercicio;
-use common\modules\maintenance\searchs\EjercicioSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+use common\modules\maintenance\models\Ejercicio;
+use common\modules\maintenance\searchs\EjercicioSearch;
 
 /**
  * EjercicioController implements the CRUD actions for Ejercicio model.
@@ -145,5 +146,14 @@ class EjercicioController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionUploadFile($id)
+    {
+        $modelMedia = new Media();
+        $files = UploadedFile::getInstances($modelMedia, 'file');
+        Yii::$app->media->uploadFiles($files, 'tickets', $id);
+
+        return true;
     }
 }
