@@ -1,4 +1,6 @@
 <?php
 return [
-    'adminEmail' => 'admin@example.com',
+    'adminEmail' => 'no-reply@centrodemandos.es',
+    'web' => 'http://www.centrodemandos.es',
+    'name' => 'Centro de mandos',
 ];
