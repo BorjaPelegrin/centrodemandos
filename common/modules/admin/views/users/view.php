@@ -3,7 +3,7 @@
 //use common\classes\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\modules\admin\models\Users */
+/* @var $model common\models\User */
 
 $this->title = 'Mi perfil de usuario';
 // Todo: si es administrador que pueda vers este enlace al index
@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ]) ?>
         </div>
         <div class="col-md-9">
-            <?= @themes\adminlte\widgets\AdminlteBox::widget([
+            <?= @themes\custom\widgets\AdminlteBox::widget([
                 'buttons' => $buttons,
                 'content' => $this->render('views/_related', [
                     'model' => $model,

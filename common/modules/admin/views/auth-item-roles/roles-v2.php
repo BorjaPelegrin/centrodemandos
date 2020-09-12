@@ -7,7 +7,7 @@ $this->params['breadcrumbs'][] = $this->title;
 $options['box-footer'] = 'Listado de permisos por página'
 ?>
 
-<?= @themes\adminlte\widgets\AdminlteBox::widget([
+<?= @themes\custom\widgets\AdminlteBox::widget([
     'buttons' => $buttons,
     'content' => $this->render('views/route/_permission-v2', [
         'parent' => $parent,

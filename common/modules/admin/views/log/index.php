@@ -88,7 +88,7 @@ $columns = [
 ?>
 <div class="log-index">
 
-    <?= @themes\adminlte\widgets\AdminlteBoxGrid::widget([
+    <?= @themes\custom\widgets\AdminlteBoxGrid::widget([
         'searchModel' => $searchModel,
         'dataProvider' => $dataProvider,
         'columns' => $columns,

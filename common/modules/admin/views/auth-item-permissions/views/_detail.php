@@ -9,7 +9,7 @@ $buttonsUser = [
 ];
 ?>
 
-<?= @themes\adminlte\widgets\AdminlteBox::widget([
+<?= @themes\custom\widgets\AdminlteBox::widget([
     'buttons' => $buttons,
     'content' => $model->name,
     'options' => [

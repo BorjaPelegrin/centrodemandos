@@ -18,7 +18,7 @@ $buttons = [
 ?>
 <div class="auth-item-create">
 
-   <?= @themes\adminlte\widgets\AdminlteBox::widget([
+   <?= @themes\custom\widgets\AdminlteBox::widget([
         'buttons' => $buttons,
         'content' => $this->render('forms/_form', [
             'model' => $model,

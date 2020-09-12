@@ -19,7 +19,7 @@ $buttons = [
 ?>
 <div class="users-update">
 
-    <?= @themes\adminlte\widgets\AdminlteBox::widget([
+    <?= @themes\custom\widgets\AdminlteBox::widget([
         'buttons' => $buttons,
         'content' => $this->render('forms/_password', [
             'model' => $model,

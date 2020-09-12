@@ -59,7 +59,7 @@ $buttonsUser = [
 ];
 ?>
 
-<?= @themes\adminlte\widgets\AdminlteUser2::widget([
+<?= @themes\custom\widgets\AdminlteUser2::widget([
     '_model' => $model,
     'options' => [
         'name' => $model->username,

@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="logs-sms-view">
 
-    <?= @themes\adminlte\widgets\AdminlteBox::widget([
+    <?= @themes\custom\widgets\AdminlteBox::widget([
         'buttons' => $buttons,
         'content' => $this->render('views/_view', [
             'model' => $model,

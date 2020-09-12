@@ -30,7 +30,7 @@ $buttons = [
 ?>
 <div class="users-update">
 
-    <?= @themes\adminlte\widgets\AdminlteBox::widget([
+    <?= @themes\custom\widgets\AdminlteBox::widget([
         'buttons' => $buttons,
         'content' => $model->access_token,
         'options' => [

@@ -87,7 +87,7 @@ $columns = [
 
 <div class="session-index">
 
-    <?= @themes\adminlte\widgets\AdminlteBoxGrid::widget([
+    <?= @themes\custom\widgets\AdminlteBoxGrid::widget([
         'searchModel' => $searchModel,
         'dataProvider' => $dataProvider,
         'columns' => $columns,

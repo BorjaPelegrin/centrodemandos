@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ]) ?>
         </div>
         <div class="col-md-9">
-            <?= @themes\adminlte\widgets\AdminlteBox::widget([
+            <?= @themes\custom\widgets\AdminlteBox::widget([
                 'buttons' => $buttons,
                 'content' => $this->render('views/_related', [
                     'model' => $model
