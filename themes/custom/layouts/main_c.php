@@ -47,7 +47,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
         }, 6000);
     </script>
 </head>
-<body class="hold-transition skin-pink sidebar-mini sidebar-collapse">
+<body class="hold-transition skin-angel sidebar-mini sidebar-collapse">
 <div class="wrapper">
 
     <?php if (!Yii::$app->user->isGuest) : ?>

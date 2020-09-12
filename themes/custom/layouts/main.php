@@ -18,7 +18,7 @@ AppAsset::register($this);
 $this->registerMetaTag(['name' => 'robots', 'content' => 'noindex']);
 $this->registerMetaTag(['charset' => Yii::$app->charset]);
 $this->registerMetaTag(['http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge']);
-$this->registerMetaTag(['name' => 'description', 'content' => 'Hal Admin Panel']);
+$this->registerMetaTag(['name' => 'description', 'content' => 'Centro de mandos Admin Panel']);
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no']);
 ?>
 
