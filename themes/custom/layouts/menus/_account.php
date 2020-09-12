@@ -42,15 +42,12 @@ $urlImage = str_replace($route, '', $urlImage);
             <!-- /.row -->
         </li> */ ?>
         <!-- Menu Footer-->
-        <?php /*
+
         <li class="user-footer">
             <div class="pull-left">
                 <?php
-                if ($entity) {
-                    $url = $entity->urlProfile;
-                } else {
                     $url = \yii\helpers\Url::to(['/admin/users/view', 'id'=>Yii::$app->user->id]);
-                }
+
                 ?>
                 <?= \yii\helpers\Html::a(
                     'Perfíl',
@@ -72,6 +69,6 @@ $urlImage = str_replace($route, '', $urlImage);
                 ) ?>
             </div>
         </li>
- */ ?>
+
     </ul>
 </li>
