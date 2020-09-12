@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 //use kartik\dialog\Dialog;
 
-/*$entity = Yii::$app->user->identity->idUserEntity;
+$entity = Yii::$app->user->identity;
 $urlImage = $entity->urlImage;
 $route = \Yii::getAlias('@backend/web');
-$urlImage = str_replace($route, '', $urlImage);*/
+$urlImage = str_replace($route, '', $urlImage);
 
 
 ?>
@@ -15,13 +15,13 @@ $urlImage = str_replace($route, '', $urlImage);*/
 <!-- User Account: style can be found in dropdown.less -->
 <li class="dropdown user user-menu">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Cuenta">
-        <?php /* \yii\helpers\Html::img($urlImage, ['class' => 'user-image', 'alt' => 'User Image']) */ ?>
+        <?= \yii\helpers\Html::img($urlImage, ['class' => 'user-image', 'alt' => 'User Image']) ?>
         <?php /* <span class="hidden-xs"><?= $entity ? $entity->fullName : Yii::$app->user->identity->username ?></span> */ ?>
     </a>
     <ul class="dropdown-menu">
         <!-- User image -->
         <li class="user-header">
-            <?php /* \yii\helpers\Html::img($urlImage, ['class' => 'img-circle img-profile-image', 'alt' => 'Employee Image', 'style' => 'height: 130px; width:130px;']) */ ?>
+            <?=\yii\helpers\Html::img($urlImage, ['class' => 'img-circle img-profile-image', 'alt' => 'Employee Image', 'style' => 'height: 130px; width:130px;']) ?>
             <p>
                 <?php /*
                 <?= Yii::$app->user->identity->clinicEmployee->employeeName ?>

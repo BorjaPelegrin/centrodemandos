@@ -1,6 +1,8 @@
 <?php
 namespace common\models;
 
+use common\modules\media\models\Media;
+use common\modules\media\models\MediaType;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
@@ -231,5 +233,24 @@ class User extends ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getUrlImage()
+    {
+        $pm = Media::find()->where([
+            'associated_tb' => 'user',
+            'associated_id' => $this->id,
+            'id_media_type' => MediaType::IMG_PERFIL,
+            'is_archived' => 0
+        ])->orderBy("id_media DESC")->asArray()->one();
+
+        if ($pm) {
+            return $pm['source'];
+        }
+
+        return '@web/img/profile.png';
     }
 }
