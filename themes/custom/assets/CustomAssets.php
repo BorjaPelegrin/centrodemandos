@@ -15,7 +15,7 @@ class CustomAssets extends \yii\web\AssetBundle
         'css/custom.css'
     ];
     public $js = [
-        'js/jquery.slimscroll.min.js'
+        //'js/custom.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
