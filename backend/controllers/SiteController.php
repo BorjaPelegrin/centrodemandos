@@ -77,8 +77,14 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            $this->setLoginAttempts(0);
+
+            //$session = Yii::$app->admin->initAfterLogin();
+
             return $this->goBack();
         } else {
+            $this->setLoginAttempts($this->getLoginAttempts() + 1);
+
             $model->password = '';
 
             return $this->render('login', [
@@ -99,6 +105,10 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
+        if ($this->getLoginAttempts() >= 3) {
+            $model->scenario = 'withVerifyCode';
+        }
+
         if ($model->load(Yii::$app->request->post())) {
             $user = new User();
             $user->username = $model->username;
@@ -124,5 +134,15 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    protected function getLoginAttempts()
+    {
+        return Yii::$app->getSession()->get('__LoginAttemptsCount', 0);
+    }
+
+    protected function setLoginAttempts($value)
+    {
+        Yii::$app->getSession()->set('__LoginAttemptsCount', $value);
     }
 }
