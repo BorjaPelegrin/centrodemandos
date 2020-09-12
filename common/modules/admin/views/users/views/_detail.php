@@ -3,10 +3,11 @@ use common\classes\Html;
 
 $status = $model->status ? 'Activo' : 'Desactivado';
 $buttonsUser = [
-    Html::a('<i class="fa fa-bars"></i> '.$model->fullName, ['/people/employee/view','id'=>$model->idUserEntity->associated_id], [
+    //Html::a('<i class="fa fa-bars"></i> '.$model->fullName, ['/people/employee/view','id'=>$model->idUserEntity->associated_id], [
+    Html::a('<i class="fa fa-bars"></i> '.$model->username, '#' /*['/people/employee/view','id'=>$model->idUserEntity->associated_id]*/, [
         'class' => '',
         'data-toggle' => 'tooltip',
-        'title' => 'Nombre completo',
+        'title' => 'Usuario',
     ]),
     Html::a('<i class="fa fa-bars"></i> Listado', ['index'], [
         'class' => '',
@@ -24,7 +25,7 @@ $buttonsUser = [
         'title' => 'Cambiar la contraseña',
     ]),
     //Html::a('<i class="fa fa-trash"></i> Eliminar', ['deleted'], ['class' => 'btn-danger']),
-    \yii\helpers\Html::a('<i class="fa fa-send"></i> Email', 'mailto:'.$model->email, [
+    Html::a('<i class="fa fa-send"></i> Email', 'mailto:'.$model->email, [
         'class' => '',
         'data-toggle' => 'tooltip',
         'title' => 'Mandar email',
@@ -32,7 +33,7 @@ $buttonsUser = [
     '<div class="staked" data-toggle="tooltip" title="Estado"><i class="fa fa-bars"></i> Estado <span class="pull-right badge bg-green">'.$status.'</span></div>',
     '<div class="staked" data-toggle="tooltip" title="Fecha dado de alta"><i class="fa fa-bars"></i> Alta <span class="pull-right badge bg-yellow">'.Yii::$app->formatter->asDate($model->created_at).'</span></div>',
     '<div class="staked" data-toggle="tooltip" title="Fecha última actualización"><i class="fa fa-bars"></i> Actualizado <span class="pull-right badge bg-aqua">'.Yii::$app->formatter->asDate($model->updated_at).'</span></div>',
-    Html::a('<i class="fa fa-wrench"></i> Token <br>'.$model->access_token, ['token', 'id'=>$model->id], [
+    Html::a('<i class="fa fa-wrench"></i> Token <br>'.$model->verification_token, ['token', 'id'=>$model->id], [
         'class' => '',
         'data-toggle' => 'tooltip',
         'title' => 'Gestionar token',
