@@ -66,7 +66,7 @@ class Users extends ActiveRecord implements IdentityInterface
      */
     public static function tableName()
     {
-        return 'yii_user';
+        return 'user';
     }
 
     /**
