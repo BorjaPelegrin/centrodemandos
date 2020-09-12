@@ -16,7 +16,7 @@ $urlImage = str_replace($route, '', $urlImage);
 <li class="dropdown user user-menu">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Cuenta">
         <?= \yii\helpers\Html::img($urlImage, ['class' => 'user-image', 'alt' => 'User Image']) ?>
-        <?php /* <span class="hidden-xs"><?= $entity ? $entity->fullName : Yii::$app->user->identity->username ?></span> */ ?>
+        <span class="hidden-xs">&nbsp;</span>
     </a>
     <ul class="dropdown-menu">
         <!-- User image -->
