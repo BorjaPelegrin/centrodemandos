@@ -1,6 +1,6 @@
 <?php
 
-use common\classes\Html;
+use yii\helpers\Html;
 ?>
 
 <div class="box box-widget widget-user-2">

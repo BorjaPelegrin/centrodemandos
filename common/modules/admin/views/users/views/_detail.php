@@ -1,5 +1,5 @@
 <?php
-use common\classes\Html;
+use yii\helpers\Html;
 
 $status = $model->status ? 'Activo' : 'Desactivado';
 $buttonsUser = [
