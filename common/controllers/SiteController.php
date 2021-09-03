@@ -1,5 +1,5 @@
 <?php
-namespace backend\controllers;
+namespace common\controllers;
 
 use common\models\User;
 use Yii;
@@ -61,6 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        var_dump("asdf2");die();
         return $this->redirect('/dashboard/index');
     }
 
@@ -71,7 +72,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        var_dump("asdf1");die();
+        var_dump("asdf2");die();
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }

@@ -17,6 +17,8 @@ class DashboardController extends Controller
     public function actionIndex()
     {
 
+        var_dump("asdf");
+        die();
         return $this->render('index');
     }
 

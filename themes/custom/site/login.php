@@ -134,6 +134,8 @@ $this->registerJs(<<<JS
   });
 JS
     , \yii\web\View::POS_LOAD);*/
+var_dump("asdf3");
+die();
 ?>
     <div class="site-login">
 
